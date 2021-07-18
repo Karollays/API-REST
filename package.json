@@ -1,0 +1,27 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "Está api ira gerir um sistema de restaurante onde é possível, cadastrar clientes, produtos,funcionários, fornecedores, fazer pedidos e até mesmo, fazer uma lista de compra.",
+  "main": "s",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karollays/API-REST.git"
+  },
+  "keywords": [
+    "API-RES",
+    "JavaSript",
+    "Restaurante"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karollays/API-REST/issues"
+  },
+  "homepage": "https://github.com/Karollays/API-REST#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
