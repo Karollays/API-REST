@@ -15,6 +15,17 @@ class ComprasService {
         }
     }
 
+    async create(compras) {
+        try {
+            const newCompras = new Compras(compras);
+            return await newCompras.save();
+        } catch (error) {
+            console.log(error.message);
+            throw new Error({
+                'ComprasService error': error.message
+            });
+        }
+    }
 
 }
 
