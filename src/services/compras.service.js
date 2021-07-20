@@ -44,7 +44,22 @@ class ComprasService {
             });
         }
     }
+    async delete(id) {
+        const findCompras = await this.dbCompras.findById(id)
 
+        if (!findCompras) return null
+
+        return await findCompras.destroy();
+    } catch (error) {
+        console.log(error);
+
+        throw new Error({
+            'ComprasService error: ': error.message
+        });
+    }
+
+
+ 
 
 }
 
