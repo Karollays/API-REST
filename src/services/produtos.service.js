@@ -28,6 +28,21 @@ class ProdutosService {
       throw new Error('ProductService error: ' + error.message);
     }
   }
+  // update products
+  async update(id, produto) {
+    try {
+      // busca o produto
+      const findProduto = await this.dbProduto.findByPk(id)
+      // verifica se encontrou o produto
+      await findProduto.update(produto)
+      return findProduto
+    } catch (error) {
+      // mostra o erro no console
+      console.log(error.message);
+      // gera um erro
+      throw new Error({ 'ProductService error: ': error.message });
+    }
+  }
 }
 // instancia o produtosService
 const produtosService = new ProdutosService();
