@@ -26,6 +26,25 @@ class ComprasService {
             });
         }
     }
+    
+    async update(id, compras) {
+        try {
+            const findCompras = await this.dbCompras.findById(id)
+
+            if (!findCompras) return null
+
+            await findCompras.update(compras)
+
+            return findCompras
+        } catch (error) {
+            console.log(error.message);
+
+            throw new Error({
+                'ComprasService error: ': error.message
+            });
+        }
+    }
+
 
 }
 
