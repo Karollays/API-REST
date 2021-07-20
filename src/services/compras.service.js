@@ -59,7 +59,20 @@ class ComprasService {
     }
 
 
- 
+    async findByID(id) {
+        try {
+            const findCompras = await this.dbCompras.findByPk(id)
+
+            return findCompras;
+        } catch (error) {
+            console.log(error);
+
+            throw new Error({
+                'ComprasService error: ': error.message
+            });
+
+        }
+    }
 
 }
 
