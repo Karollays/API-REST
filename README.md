@@ -1,7 +1,19 @@
 # Indice
 - [Descrição](#restaurante-api-resilia-modulo-4)
 - [Fluxo de Trabalho MVC](#fluxo-de-trabalho-mvc)
-  - [Afinal, oque é MVC](#afinal,-oque-e-mvc)
+- [Services](#services)
+- [Controller](#controller)
+  - [Controller-Produtos](#produtos)
+  - [Controller-Clientes](#clientes)
+  - [Controller-Funcionarios](#funcionários)
+  - [Controller-Fornecedores](#fornecedores)
+  - [Controller-Compras](#compras)
+- [Models](#Models)
+  - [Model-Produtos](#model-produtos)
+  - [Model-Clientes](#model-clientes)
+  - [Model-Funcionarios](#model-funcionários)
+  - [Model-Fornecedores](#model-fornecedores)
+  - [Model-Compras](#model-compras)
 
 # Restaurante-API RESILIA MODULO 4
 
