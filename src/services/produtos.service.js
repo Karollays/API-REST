@@ -14,6 +14,20 @@ class ProdutosService {
       throw new Error({ 'ProdutosService error: ': error.message });
     }
   }
+  // post product
+  async create(produto) {
+    try {
+      // instancia um novo produto
+      const newProduto = new Produto(produto);
+      // salva o produto no banco
+      return await newProduto.save();
+    } catch (error) {
+      // mostra o erro no console
+      console.log(error.message);
+      // gera um erro
+      throw new Error('ProductService error: ' + error.message);
+    }
+  }
 }
 // instancia o produtosService
 const produtosService = new ProdutosService();
