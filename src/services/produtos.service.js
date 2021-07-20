@@ -34,7 +34,10 @@ class ProdutosService {
       // busca o produto
       const findProduto = await this.dbProduto.findByPk(id)
       // verifica se encontrou o produto
+      if(!findProduto) return null
+      // atualiza o produto
       await findProduto.update(produto)
+      // retorna o produto atualizado
       return findProduto
     } catch (error) {
       // mostra o erro no console
