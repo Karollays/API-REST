@@ -42,7 +42,7 @@ class ProdutosController {
       const {id}= req.params;
       const result = await ProdutosService.update(id ,req.body);
       // verificar se o produto foi atualizado
-      if (!result) return res.status(201).json({ success: true, data: 'Ouve um erro' });
+      if (!result) return res.status(201).json({ success: true, data: 'Produto não encontrado' });
       // retorna os resultados
       return res.status(201).json({ success: true, data: result });
     } catch (error) {
