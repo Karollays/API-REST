@@ -1,5 +1,7 @@
 # Indice
 #### - [Descrição](#restaurante-api-resilia-modulo-4)
+#### - [Tecnologias](#tecnologias)
+#### - [Iniciando Projeto](#iniciando-projeto)
 #### - [Fluxo de Trabalho MVC](#fluxo-de-trabalho-mvc)
 #### - [Services](#services)
 #### - [Controller](#controller)
@@ -17,9 +19,70 @@
 #### [Referencias]()
 - [Semantic-coomit](common/semantic-commit.md)
 - [Padrão de Pull Request](common/PR.md)
+
 # Restaurante-API RESILIA MODULO 4
 
 Está api ira gerir um sistema de restaurante onde é possível, cadastrar clientes, produtos,funcionários, fornecedores, fazer pedidos e até mesmo, fazer uma lista de compra.
+# Tecnologias
+
+Neste projeto utilizamos tudo oque aprendemos nas aulas do 4 modulo,
+este modulo é voltado para desenvolvimento back-end onde montamo uma 
+API-Rest utilizando javascript.
+
+- [PostgresSQL](https://pt.wikipedia.org/wiki/PostgreSQL)
+```
+PostgreSQL é um sistema gerenciador de banco de dados objeto relacional (SGBD),
+desenvolvido como projeto de código aberto
+```
+- [NodeJs](https://pt.wikipedia.org/wiki/Node.js)
+```
+Node.js é um software de código aberto, multiplataforma, baseado no interpretador
+V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.
+```
+- [Sequelize](https://sequelize.org/)
+```
+Zequelize é um Node.js ORM baseado em promessa para Postgres,
+MySQL, MariaDB, SQLite e Microsoft SQL Server. Ele oferece suporte
+a transações sólidas, relações, carregamento rápido e lento,
+replicação de leitura e muito mais.
+```
+- [Dockek](https://pt.wikipedia.org/wiki/Docker_(software))
+```
+Docker é um conjunto de produtos de plataforma como serviço (PaaS) que
+usam virtualização de nível de sistema operacional para entregar 
+software em pacotes chamados contêineres.
+```
+- [Docker-compose](https://docs.docker.com/compose/)
+```
+Com o Compose, você usa um arquivo YAML para configurar os serviços do 
+seu aplicativo. Então, com um único comando, você cria e inicia todos os
+serviços de sua configuração. Para saber mais sobre todos os recursos do 
+Compose, consulte a lista de recursos .
+```
+# Iniciando projeto
+
+Neste projeto utilizamoso o docker para levantar um container do PostgreSQL para fornecer o banco de dados, e assim fazendo a conexão utilizando a api.
+Dentro da pasta do projeto, abra o terminar e utilize os seguintes comandos.
+
+Passo 1 - Iniciando o container
+
+```bash
+docker-compose up --build
+```
+Resulado:
+
+![docker-compose](common/docker-postgresql.png)
+
+Passo 2 - Para desenvolvedor:
+
+```bash
+npm run start:dev
+```
+Resultado:
+
+![api-rest](common/api-start.png)
+
+
 
 # Fluxo de trabalho MVC
 ![mvc](/common/diagramaMVC.png)
