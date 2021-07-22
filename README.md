@@ -1,20 +1,22 @@
 # Indice
-- [Descrição](#restaurante-api-resilia-modulo-4)
-- [Fluxo de Trabalho MVC](#fluxo-de-trabalho-mvc)
-- [Services](#services)
-- [Controller](#controller)
+#### - [Descrição](#restaurante-api-resilia-modulo-4)
+#### - [Fluxo de Trabalho MVC](#fluxo-de-trabalho-mvc)
+#### - [Services](#services)
+#### - [Controller](#controller)
   - [Controller-Produtos](#produtos)
   - [Controller-Clientes](#clientes)
   - [Controller-Funcionarios](#funcionários)
   - [Controller-Fornecedores](#fornecedores)
   - [Controller-Compras](#compras)
-- [Models](#Models)
+#### - [Models](#models)
   - [Model-Produtos](#model-produtos)
   - [Model-Clientes](#model-clientes)
   - [Model-Funcionarios](#model-funcionários)
   - [Model-Fornecedores](#model-fornecedores)
   - [Model-Compras](#model-compras)
-
+#### [Referencias]()
+- [Semantic-coomit](common/semantic-commit.md)
+- [Padrão de Pull Request](common/PR.md)
 # Restaurante-API RESILIA MODULO 4
 
 Está api ira gerir um sistema de restaurante onde é possível, cadastrar clientes, produtos,funcionários, fornecedores, fazer pedidos e até mesmo, fazer uma lista de compra.
