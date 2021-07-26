@@ -3,9 +3,8 @@ require('dotenv').config();
 class SequelizeConfig {
   constructor() {
     // sequelize connection
-    this.database = new Sequelize(
+    this.database = new Sequelize(process.env.DATABASE_URL,
       {
-        host: process.env.DATABASE_URL,
         dialect: 'postgres',
       }
     );
