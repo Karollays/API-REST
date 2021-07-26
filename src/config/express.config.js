@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const appRouter = require('../routes/index')
 const sequelize = require('../config/sequelize.config')
 require('dotenv').config()
@@ -29,6 +30,8 @@ class ExpressConfig {
   loadExpressUse() {
     // express json middleware
     this.app.use(express.json());
+    // load cors 
+    this.app.use(cors());
     // load routes 
     this.app.use('/',appRouter);
   }
