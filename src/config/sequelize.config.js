@@ -4,12 +4,8 @@ class SequelizeConfig {
   constructor() {
     // sequelize connection
     this.database = new Sequelize(
-      process.env.POSTGRES_NAME,
-      process.env.POSTGRES_USER,
-      process.env.POSTGRES_PASSWORD,
       {
-        host: process.env.POSTGRES_HOST,
-        port: process.env.POSTGRES_PORT,
+        host: process.env.DATABASE_URL,
         dialect: 'postgres',
       }
     );
