@@ -4,5 +4,11 @@ comprasRouter.get('/', (req, res) => {
   res.json({message:'listando compras'})
 });
 
+// referencia /compras
 
+comprasRouter.get('/', comprasController.getAll)
+comprasRouter.post('/', comprasController.create)
+comprasRouter.put('/', comprasController.update)
+comprasRouter.delete('/', comprasController.delete)
+comprasRouter.get('/', comprasController.findById)
 module.exports = comprasRouter
