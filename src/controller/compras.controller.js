@@ -36,6 +36,24 @@ async create(req, res, next) {
     }
 }
 
+/// update compras
+async update(req, res, next) {
+    try {
+        const {id}= req.params;
+        const result = await ComprasService.update(id,req.body);
+        //verificar se a compra foi atualizada
+        if(!result) return res.status(201).json({ success: true, data: 'Compra não encontrada'})
+        // retorna os resultados
+        return res.status(201).json({ success: true, data: result});
+    } catch (error) {
+        // imprime o erro no console
+        console.log(error);
+       // retorna erro caso tenha algum error
+       res.status(400).json({ success: false, data: error.message}); 
+    }
+}
+
+
 }
 // instancia o ComprasController
 const comprasController = new ComprasController();
