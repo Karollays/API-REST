@@ -53,6 +53,39 @@ async update(req, res, next) {
     }
 }
 
+// delete compras 
+async delete(req, res, next) {
+    try {
+        const {id}= req.params;
+        const res = await ComprasService.delete(id);
+        //verificar se a compra foi deletada
+        if(!result) return res.status(201).json({ success: true, data: 'Nenhuma compra com esse id foi encontrado' });
+        // retorna os resultados
+        return res.status(201).json({ success: true, data: 'Compra deletada com sucesso'});
+    } catch (error) {
+        // imprime o erro no console
+        console.log(error);
+    // retorna erro caso ocorra algum error
+    res.status(400).json({ success: false, data: error.message}); 
+    }
+}
+// findByID compra
+async findById(req, res, next) {
+    try{
+        const {id} = req.params; 
+        const res = await ComprasService.findByID(id);
+        // verifica se a compra foi deletada
+        if(!result) return res.status(201).json({ success: true, data: 'Nenhuma compra foi encontrada' });
+        // retorna as compras 
+        return res.status(201).json({ success: true, data: result});
+    } catch (error) {
+        // imprime o erro no console
+        console.log(error);
+        // retorna erro caso ocorra algum erro
+        res.status(400).json({ success: false, data: error.message });
+    }
+}
+
 
 }
 // instancia o ComprasController
