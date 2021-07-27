@@ -35,6 +35,22 @@ class ClientesController {
       res.status(400).json({ success: false, data: error.message });
     }
   }
+  // update clientes
+  async update(req, res, next) {
+    try {
+      const {id}= req.params;
+      const result = await ClientesService.update(id ,req.body);
+      // verificar se cliente foi atualizado
+      if (!result) return res.status(201).json({ success: true, data: 'Cliente não encontrado' });
+      // retorna os resultados
+      return res.status(201).json({ success: true, data: result });
+    } catch (error) {
+      // imprime o erro no console
+      console.log(error);
+      // retorna erro caso ocorra algum erro
+      res.status(400).json({ success: false, data: error.message });
+    }
+  }
   
 }
 // instancia o ClientesController
