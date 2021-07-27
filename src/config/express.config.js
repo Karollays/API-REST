@@ -1,5 +1,7 @@
 const express = require('express')
 const cors = require('cors')
+const favicon = require('serve-favicon')
+const path = require('path')
 const appRouter = require('../routes/index')
 const sequelize = require('../config/sequelize.config')
 require('dotenv').config()
@@ -35,7 +37,7 @@ class ExpressConfig {
     // load routes 
     this.app.use('/',appRouter);
     // load favicon.ico
-    this.app.use('/favicon.ico', (req, res) => res.status(204).json({}));
+    this.app.use(favicon(path.join(__dirname, '..','..', 'favicon.ico')));
     // default connection routes
     this.app.use('/',(req, res, next) => {
       res.status(201).json({
