@@ -32,6 +32,12 @@ class ExpressConfig {
     this.app.use(express.json());
     // load cors 
     this.app.use(cors());
+    // default connection routes
+    this.app.use('/',(req, res, next) => {
+      res.status(404).send({
+        error: 'Not found'
+      });
+    })
     // load routes 
     this.app.use('/',appRouter);
   }
