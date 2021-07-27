@@ -32,14 +32,16 @@ class ExpressConfig {
     this.app.use(express.json());
     // load cors 
     this.app.use(cors());
+    // load routes 
+    this.app.use('/',appRouter);
+    // load favicon.ico
+    this.app.use('/favicon.ico', (req, res) => res.status(204));
     // default connection routes
     this.app.use('/',(req, res, next) => {
       res.status(404).send({
         error: 'Not found'
       });
     })
-    // load routes 
-    this.app.use('/',appRouter);
   }
 }
 const server = new ExpressConfig()
