@@ -56,7 +56,7 @@ async update(req, res, next) {
 async delete(req, res, next) {
     try {
         const {id}= req.params;
-        const res = await ComprasService.delete(id);
+        const result = await ComprasService.delete(id);
         //verificar se a compra foi deletada
         if(!result) return res.status(201).json({ success: true, data: 'Nenhuma compra com esse id foi encontrado' });
         // retorna os resultados
@@ -72,7 +72,7 @@ async delete(req, res, next) {
 async findById(req, res, next) {
     try{
         const {id} = req.params; 
-        const res = await ComprasService.findByID(id);
+        const result = await ComprasService.findByID(id);
         // verifica se a compra foi deletada
         if(!result) return res.status(201).json({ success: true, data: 'Nenhuma compra foi encontrada' });
         // retorna as compras 
