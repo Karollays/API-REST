@@ -18,8 +18,8 @@ class ExpressConfig {
       // inicia a conexão com o banco de dados
       this.dbConfig.startDatabase()
       // inicia a conexão http
-      this.app.listen(this.port, this.host, () => {
-        console.log(`Servidor rodando no endereço: ${'http://' + this.host +':'+ this.port}`);
+      this.app.listen(this.port, () => {
+        console.log(`Servidor rodando no endereço: ${'port' + ':'+ this.port}`);
       });
     }).catch(err => {
       console.log(err)
