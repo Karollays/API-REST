@@ -47,7 +47,23 @@ class ClientesService {
       throw new Error({ 'ClienteService error: ': error.message });
     }
   }
- 
+  // delete cliente
+  async delete(id) {
+    try {
+      // busca o cliente
+      const findCliente = await this.dbCliente.findByPk(id)
+      // verifica se encontrou o cliente
+      if(!findCliente) return null
+      // deleta o cliente
+      return await findCliente.destroy();
+    } catch (error) {
+      // mostra o erro no console
+      console.log(error);
+      // gera um erro
+      throw new Error({ 'ClientesService error: ': error.message });
+    }
+  }
+  
 }
 // instancia o clientesService
 const clientesService = new ClientesService();
