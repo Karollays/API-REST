@@ -38,7 +38,7 @@ class ExpressConfig {
     this.app.use('/favicon.ico', (req, res) => res.status(204));
     // default connection routes
     this.app.use('/',(req, res, next) => {
-      res.status(404).send({
+      res.status(201).json({
         error: 'Not found'
       });
     })
