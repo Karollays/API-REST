@@ -5,7 +5,7 @@ const comprasRouter = express.Router()
 
 comprasRouter.get('/', comprasController.getAll)
 comprasRouter.post('/', comprasController.create)
-comprasRouter.put('/', comprasController.update)
-comprasRouter.delete('/', comprasController.delete)
-comprasRouter.get('/', comprasController.findById)
+comprasRouter.put('/:id', comprasController.update)
+comprasRouter.delete('/:id', comprasController.delete)
+comprasRouter.get('/:id', comprasController.findById)
 module.exports = comprasRouter
