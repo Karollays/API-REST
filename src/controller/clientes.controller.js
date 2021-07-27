@@ -51,6 +51,22 @@ class ClientesController {
       res.status(400).json({ success: false, data: error.message });
     }
   }
+  // delete cliente
+  async delete(req, res, next) {
+    try {
+      const {id}= req.params;
+      const result = await ClientesService.delete(id);
+      // verificar se o cliente foi deletado
+      if (!result) return res.status(201).json({ success: true, data: 'Nenhum cliente com esse id encontrado!' });
+      // retorna os resultados
+      return res.status(201).json({ success: true, data: 'CLiente deletado com sucesso!' });
+    } catch (error) {
+      // imprime o erro no console
+      console.log(error);
+      // retorna erro caso ocorra algum erro
+      res.status(400).json({ success: false, data: error.message });
+    }
+  }
   
 }
 // instancia o ClientesController
