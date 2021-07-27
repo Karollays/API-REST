@@ -1,5 +1,4 @@
 const ComprasService = require('../services/compras.service')
-const {require} = require('express')
 class ComprasController {
     constructor() {}
     async getAll(req, res, next) {
