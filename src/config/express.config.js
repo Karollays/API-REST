@@ -35,7 +35,7 @@ class ExpressConfig {
     // load routes 
     this.app.use('/',appRouter);
     // load favicon.ico
-    this.app.use('/favicon.ico', (req, res) => res.status(204));
+    this.app.use('/favicon.ico', (req, res) => res.status(204).json({}));
     // default connection routes
     this.app.use('/',(req, res, next) => {
       res.status(201).json({
