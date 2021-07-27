@@ -1,4 +1,5 @@
 const express = require('express')
+const comprasController = require('../controller/compras.controller')
 const comprasRouter = express.Router()
 // referencia /compras
 
