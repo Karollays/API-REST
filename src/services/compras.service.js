@@ -29,7 +29,7 @@ class ComprasService {
     
     async update(id, compras) {
         try {
-            const findCompras = await this.dbCompras.findById(id)
+            const findCompras = await this.dbCompras.findByPk(id)
 
             if (!findCompras) return null
 
@@ -45,7 +45,7 @@ class ComprasService {
         }
     }
     async delete(id) {
-        const findCompras = await this.dbCompras.findById(id)
+        const findCompras = await this.dbCompras.findByPk(id)
 
         if (!findCompras) return null
 
@@ -76,6 +76,6 @@ class ComprasService {
 
 }
 
-const compras = new Compras();
+const compras = new ComprasService();
 
 module.exports = compras;
