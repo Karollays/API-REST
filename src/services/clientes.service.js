@@ -63,7 +63,20 @@ class ClientesService {
       throw new Error({ 'ClientesService error: ': error.message });
     }
   }
-  
+  // find cliente by id
+  async findByID(id) {
+    try {
+      // busca o cliente
+      const findCliente = await this.dbCliente.findByPk(id)
+      // retorna o cliente
+      return findCliente;
+    } catch (error) {
+      // mostra o erro no console
+      console.log(error);
+      // gera um erro
+      throw new Error({ 'ClientesService error: ': error.message });
+    }
+  }
 }
 // instancia o clientesService
 const clientesService = new ClientesService();
