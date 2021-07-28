@@ -25,7 +25,7 @@ class ClientesController {
     try {
       const result = await ClientesService.create(req.body);
       // verificar se o cliente foi criado
-      if (!result) return res.status(201).json({ success: true, data: 'Ouve um erro' });
+      if (!result) return res.status(201).json({ success: true, data: 'houve um erro' });
       // retorna os resultados
       return res.status(201).json({ success: true, data: result });
     } catch (error) {
