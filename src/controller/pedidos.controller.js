@@ -1,5 +1,5 @@
 const PedidosService = require('../services/pedidos.service');
-const {request} = require('express')
+
 class PedidosController {
   constructor() {}
   async getAll(req, res, next) {
@@ -24,7 +24,7 @@ class PedidosController {
  
   async create(req, res, next) {
     try {
-      const result = await PedidossService.create(req.body);
+      const result = await PedidosService.create(req.body);
      
       if (!result) return res.status(201).json({ success: true, data: 'Houve um erro' });
     
