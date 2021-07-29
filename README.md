@@ -59,19 +59,24 @@ seu aplicativo. Então, com um único comando, você cria e inicia todos os
 serviços de sua configuração. Para saber mais sobre todos os recursos do 
 Compose, consulte a lista de recursos .
 ```
+- [Heroku](https://heroku.com/)
+```
+Heroku é uma plataforma em nuvem como um serviço que suporta várias linguagens
+de programação. Uma das primeiras plataformas em nuvem, o Heroku está em
+desenvolvimento desde junho de 2007, quando suportava apenas a linguagem de 
+programação Ruby, mas agora suporta Java, Node.js, Scala, Clojure, Python, 
+PHP e Go.
+```
 # Iniciando projeto
 
 Neste projeto utilizamoso o docker para levantar um container do PostgreSQL para fornecer o banco de dados, e assim fazendo a conexão utilizando a api.
 Dentro da pasta do projeto, abra o terminar e utilize os seguintes comandos.
 
-Passo 1 - Iniciando o container
+Passo 1 - Instalar modulos
 
 ```bash
-docker-compose up --build
+npm install
 ```
-Resulado:
-
-![docker-compose](common/docker-postgresql.png)
 
 Passo 2 - Para desenvolvedor:
 
