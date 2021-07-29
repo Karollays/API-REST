@@ -7,13 +7,20 @@ class Pedidos extends Model {}
 // inicias os campos do modelo
 Pedidos.init(
   {
-    
+    id: {
+      
+      type: Sequelize.STRING,
+      defaultValue: Sequelize.UUIDV4,
+      primaryKey: true,
+    },
 
     
     numeroPedido: {
       
-      type: Sequelize.STRING,
+      type: Sequelize.INTEGER,
       allowNull: false,
+      unique: true,
+      autoIncrement: true,
     },
    
     status: {
@@ -41,7 +48,7 @@ Pedidos.init(
     modelName: 'Pedidos',
   }
 );
-// instancia o modelo Produtos
+
 const pedidos = new Pedidos();
-// exporta o o modelo Produtos
+
 module.exports = Pedidos
