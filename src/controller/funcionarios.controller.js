@@ -72,12 +72,12 @@ class FuncionariosController {
   }
 
 
-            // findByID produto
+            // findByID funcionario
             async findById(req, res, next) {
               try {
                 const {id}= req.params;
                 const result = await FuncionariosService.findByID(id);
-                // verificar se o produto foi deletado
+                // verificar se o funcionario foi deletado
                 if (!result) return res.status(201).json({ success: true, data: 'Nenhum produto encontrado' });
                 // retorna os resultados
                 return res.status(201).json({ success: true, data: result });
