@@ -1,12 +1,8 @@
 const express = require('express')
-const pedidosController = require('../controller/pedidos.controller')
 const pedidosRouter = express.Router()
 
-
-pedidosRouter.get('/', pedidosController.getAll)
-pedidosRouter.post('/', pedidosController.create)
-pedidosRouter.put('/:id', pedidosController.update)
-pedidosRouter.delete('/:id', pedidosController.delete)
-pedidosRouter.get('/:id', pedidosController.findById)
+pedidosRouter.get('/', (req, res) => {
+  res.json({message:'retorna lista de pedidos'})
+});
 
 module.exports = pedidosRouter
