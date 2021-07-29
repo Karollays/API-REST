@@ -46,18 +46,13 @@ MySQL, MariaDB, SQLite e Microsoft SQL Server. Ele oferece suporte
 a transações sólidas, relações, carregamento rápido e lento,
 replicação de leitura e muito mais.
 ```
-- [Dockek](https://pt.wikipedia.org/wiki/Docker_(software))
+- [Heroku](https://heroku.com/)
 ```
-Docker é um conjunto de produtos de plataforma como serviço (PaaS) que
-usam virtualização de nível de sistema operacional para entregar 
-software em pacotes chamados contêineres.
-```
-- [Docker-compose](https://docs.docker.com/compose/)
-```
-Com o Compose, você usa um arquivo YAML para configurar os serviços do 
-seu aplicativo. Então, com um único comando, você cria e inicia todos os
-serviços de sua configuração. Para saber mais sobre todos os recursos do 
-Compose, consulte a lista de recursos .
+Heroku é uma plataforma em nuvem como um serviço que suporta várias linguagens
+de programação. Uma das primeiras plataformas em nuvem, o Heroku está em
+desenvolvimento desde junho de 2007, quando suportava apenas a linguagem de 
+programação Ruby, mas agora suporta Java, Node.js, Scala, Clojure, Python, 
+PHP e Go.
 ```
 - [Heroku](https://heroku.com/)
 ```
