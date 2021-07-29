@@ -31,7 +31,7 @@ Funcionarios.init(
     // cria um campo na tabela funcionarios com o nome
     salario: {
         // tipo do campo salário 
-        type: Sequelize.STRING,
+        type: Sequelize.FLOAT,
         allowNull: false,
       },
     // cria um campo na tabela funcionarios com telefone
@@ -60,7 +60,7 @@ Funcionarios.init(
     },
     numero: {
         // tipo do campo endereço
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
     bairro: {
@@ -75,7 +75,7 @@ Funcionarios.init(
     },
     uf: {
         // tipo do campo endereço
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(2),
         allowNull: false,
     },
     cep: {
