@@ -25,7 +25,7 @@ class PedidosService {
       // mostra o erro no console
       console.log(error.message);
       // gera um erro
-      throw new Error('ProductService error: ' + error.message);
+      throw new Error('PedidosService error: ' + error.message);
     }
   }
   // update pedido
