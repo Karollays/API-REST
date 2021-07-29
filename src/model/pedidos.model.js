@@ -7,36 +7,35 @@ class Pedidos extends Model {}
 // inicias os campos do modelo
 Pedidos.init(
   {
-    // sequelize instance nome, status, cliente, produto
+    
 
-    // cria um campo na tabela produtos com o nome de nome
-    nome: {
-      // tipo do campo nome
+    
+    numeroPedido: {
+      
       type: Sequelize.STRING,
       allowNull: false,
     },
-    // cria um campo na tabela produtos com o nome de STATUS DO PEDIDO
+   
     status: {
-      // tipo do campo preco
+     
       type: Sequelize.STRING,
       allowNull: false,
     },
-    // cria um campo na tabela produtos com o nome de CLIENTE
+   
     cliente: {
-      // tipo do campo porcentagemDeLucro
+      
       type: Sequelize.STRING,
-      allowNull: false,
-    },
-    // cria um campo na tabela produtos com o nome de quantidadeEstoque
-    produtos: {
-      // tipo do campo quantidadeEstoque
-      type: Sequelize.INTEGER,
       allowNull: false,
     },
     
+    listaDeProdutos: {
+      type: Sequelize.TEXT,
+      allowNull: true,
+  }
+    
   },
   {
-    // import database instance connection
+    
     sequelize: sequelizeConfig.database,
     // model name
     modelName: 'Pedidos',
